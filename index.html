@@ -65,6 +65,8 @@
       .content {
         padding: 10px;
         display: grid;
+        grid-template-rows: auto;
+        gap: 20px;
       }
 
       .card {
@@ -84,6 +86,10 @@
         margin-bottom: 20px;
         font-weight: 700;
         font-size: 21px;
+      }
+
+      .vip {
+        display: none;
       }
 
       .card-paragraph {
@@ -114,11 +120,15 @@
       @media (min-width: 641px) {
         .content {
           grid-template-columns: 1fr 1fr;
-          gap: 20px;
         }
 
-        .card-paragraph {
+        .card-paragraph,
+        .vip {
           display: block;
+        }
+
+        #welcome-card {
+          grid-area: 1/1/3/3;
         }
       }
 
@@ -145,6 +155,46 @@
     </header>
 
     <div class="content">
+      <div class="card" id="welcome-card">
+        <div class="card-header"></div>
+        <div class="card-title">
+          <p>$2,500 Welcome Bonue</p>
+        </div>
+        <div class="vip">
+          <div class="card-paragraph">
+            Get 100 Free Spins plus an incredible 200% and 300% match bonus on
+            your first two (2) deposits.
+          </div>
+          <div class="vip-image"></div>
+          <p>
+            Play exciting slots on Wednesdays and Fridays and win $1,000 cash in
+            our VIP tournaments! Get 100 Free Spins plus an incredible 200% and
+            300% match bonus on your first two (2) deposits.
+          </p>
+          <div class="card-paragraph">
+            Play exciting slots on Wednesdays and Fridays and win $1,000 cash in
+            our VIP tournaments!
+          </div>
+        </div>
+        <div class="card-button">
+          <button>More Info</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header"></div>
+        <div class="card-title">
+          <p>Bitcoin Free Spins</p>
+        </div>
+        <div class="card-paragraph">
+          Make your 1st deposit of the day with Bitcoin and get and extra 20
+          Free Spins on Spinfinity Man
+        </div>
+        <div class="card-button">
+          <button>More Info</button>
+        </div>
+      </div>
+
       <div class="card">
         <div class="card-header"></div>
         <div class="card-title">
