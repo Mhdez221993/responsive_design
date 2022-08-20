@@ -122,9 +122,31 @@
           grid-template-columns: 1fr 1fr;
         }
 
-        .card-paragraph,
-        .vip {
+        .card-header.welcome {
+          height: 300px;
+        }
+
+        .card-paragraph {
           display: block;
+        }
+
+        .vip {
+          display: grid;
+          height: 180px;
+          grid-template-columns: 1fr 2fr;
+          margin-bottom: 20px;
+          padding-right: 20px;
+        }
+
+        .vip-image {
+          background-color: var(--body-bg);
+        }
+
+        .vip-paragraph {
+          margin: auto 0;
+          padding-left: 20px;
+          font-weight: 600;
+          font-size: 13px;
         }
 
         #welcome-card {
@@ -156,25 +178,25 @@
 
     <div class="content">
       <div class="card" id="welcome-card">
-        <div class="card-header"></div>
+        <div class="card-header welcome"></div>
         <div class="card-title">
           <p>$2,500 Welcome Bonue</p>
         </div>
+        <div class="card-paragraph">
+          Get 100 Free Spins plus an incredible 200% and 300% match bonus on
+          your first two (2) deposits.
+        </div>
         <div class="vip">
-          <div class="card-paragraph">
-            Get 100 Free Spins plus an incredible 200% and 300% match bonus on
-            your first two (2) deposits.
-          </div>
           <div class="vip-image"></div>
-          <p>
+          <p class="vip-paragraph">
             Play exciting slots on Wednesdays and Fridays and win $1,000 cash in
             our VIP tournaments! Get 100 Free Spins plus an incredible 200% and
             300% match bonus on your first two (2) deposits.
           </p>
-          <div class="card-paragraph">
-            Play exciting slots on Wednesdays and Fridays and win $1,000 cash in
-            our VIP tournaments!
-          </div>
+        </div>
+        <div class="card-paragraph">
+          Play exciting slots on Wednesdays and Fridays and win $1,000 cash in
+          our VIP tournaments!
         </div>
         <div class="card-button">
           <button>More Info</button>
