@@ -5,6 +5,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Responsive Design</title>
+
+    <style>
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --dark: #333;
+      }
+
+      body {
+        display: grid;
+        grid-template-rows: 80px auto 50px;
+        background-color: #f9f9f9;
+      }
+
+      .content {
+        max-width: 1281px;
+        padding: 10px 0;
+      }
+
+      header {
+        background-color: var(--dark);
+      }
+
+      .header {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        max-width: 1281px;
+        margin: 0 auto;
+      }
+
+      footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--dark);
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <div class="header">
+        <h3>VegasCrest <span>casino</span></h3>
+      </div>
+    </header>
+
+    <div class="content">
+      <div class="card">
+        <div class="card-header"></div>
+        <div class="card-title"></div>
+        <div class="card-paragraph"></div>
+        <div class="card-button"></div>
+      </div>
+    </div>
+
+    <footer>
+      <h6>Ⓒ Copyright 2022. All rights reserved</h6>
+    </footer>
+  </body>
 </html>
