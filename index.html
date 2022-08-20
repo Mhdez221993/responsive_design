@@ -18,7 +18,8 @@
       h3,
       h4,
       h5,
-      h6 {
+      h6,
+      p {
         margin: 0;
         padding: 0;
       }
@@ -30,6 +31,7 @@
         --card-border: #eee;
         --button-bg: #faa63e;
         --text-color: #000;
+        --span-style: italic;
       }
 
       body {
@@ -37,11 +39,13 @@
         grid-template-rows: 80px auto 50px;
         background-color: var(--body-bg);
         color: var(--text-color);
+        font-family: sans-serif;
       }
 
       header {
         background-color: var(--dark-bg);
         color: var(--white);
+        font-size: 23px;
       }
 
       .header {
@@ -51,6 +55,11 @@
         max-width: 1281px;
         margin: 0 auto;
         padding: 0 0 0 10px;
+      }
+
+      .span-header {
+        font-style: var(--span-style);
+        font-size: 19px;
       }
 
       .content {
@@ -70,16 +79,28 @@
       .card-header {
         height: 150px;
         background-color: var(--body-bg);
+        margin-bottom: 10px;
+      }
+
+      .card-title {
+        margin-bottom: 20px;
+        font-weight: 700;
+        font-size: 21px;
       }
 
       .card-paragraph {
-        display: none;
+        /* display: none; */
+        margin-bottom: 20px;
+        padding: 0 20px;
+        font-weight: 500;
+        font-size: 17px;
       }
 
       button {
         border: 0;
         background-color: var(--button-bg);
         padding: 10px 60px;
+        font-size: 21px;
       }
 
       footer {
@@ -88,13 +109,15 @@
         justify-content: center;
         background-color: var(--dark-bg);
         color: var(--white);
+        font-size: 18px;
+        font-weight: lighter;
       }
     </style>
   </head>
   <body>
     <header>
       <div class="header">
-        <h3>VegasCrest <span>casino</span></h3>
+        <h3>VegasCrest <span class="span-header">casino</span></h3>
       </div>
     </header>
 
