@@ -7,6 +7,12 @@
     <title>Responsive Design</title>
 
     <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: inherit;
+      }
+
       h1,
       h2,
       h3,
@@ -18,22 +24,24 @@
       }
 
       :root {
-        --dark: #333;
+        --body-bg: #f9f9f9;
+        --dark-bg: #333;
+        --white: #fff;
+        --card-border: #eee;
+        --button-bg: #faa63e;
+        --text-color: #000;
       }
 
       body {
         display: grid;
         grid-template-rows: 80px auto 50px;
-        background-color: #f9f9f9;
-      }
-
-      .content {
-        max-width: 1281px;
-        padding: 10px 0;
+        background-color: var(--body-bg);
+        color: var(--text-color);
       }
 
       header {
-        background-color: var(--dark);
+        background-color: var(--dark-bg);
+        color: var(--white);
       }
 
       .header {
@@ -42,13 +50,44 @@
         align-items: center;
         max-width: 1281px;
         margin: 0 auto;
+        padding: 0 0 0 10px;
+      }
+
+      .content {
+        padding: 10px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+      }
+
+      .card {
+        text-align: center;
+        padding: 0 0 10px 0;
+        background-color: var(--white);
+        border: solid 1px var(--card-border);
+      }
+
+      .card-header {
+        height: 150px;
+        background-color: var(--body-bg);
+      }
+
+      .card-paragraph {
+        display: none;
+      }
+
+      button {
+        border: 0;
+        background-color: var(--button-bg);
+        padding: 10px 60px;
       }
 
       footer {
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: var(--dark);
+        background-color: var(--dark-bg);
+        color: var(--white);
       }
     </style>
   </head>
@@ -62,9 +101,16 @@
     <div class="content">
       <div class="card">
         <div class="card-header"></div>
-        <div class="card-title"></div>
-        <div class="card-paragraph"></div>
-        <div class="card-button"></div>
+        <div class="card-title">
+          <p>Bitcoin Free Spins</p>
+        </div>
+        <div class="card-paragraph">
+          Make your 1st deposit of the day with Bitcoin and get and extra 20
+          Free Spins on Spinfinity Man
+        </div>
+        <div class="card-button">
+          <button>More Info</button>
+        </div>
       </div>
     </div>
 
